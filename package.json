@@ -1,6 +1,6 @@
 {
   "name": "prisma-errors",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Wrappers around prisma errors",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --declaration -p tsconfig.json",
     "clean": "shx rm -rf dist",
-    "lint": "eslint ./**/*.ts",
+    "lint": "eslint src/**/*.ts",
     "semantic-release": "semantic-release"
   },
   "repository": {
