@@ -1,6 +1,6 @@
 {
   "name": "prisma-errors",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Wrappers around prisma errors",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,11 +8,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --declaration -p tsconfig.json",
     "clean": "shx rm -rf dist",
-    "lint": "eslint ./**/*.ts"
+    "lint": "eslint ./**/*.ts",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikaelkaron/prisma-errors.git"
+    "url": "https://github.com/mikaelkaron/prisma-errors.git"
   },
   "keywords": [
     "prisma"
@@ -24,8 +25,12 @@
   },
   "homepage": "https://github.com/mikaelkaron/prisma-errors#readme",
   "devDependencies": {
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "@tsconfig/node16": "^1.0.2",
     "@wtf/eslint-config": "^1.0.0",
+    "semantic-release": "^19.0.2",
     "shx": "^0.3.4",
     "typescript": "^4.5.5"
   },
