@@ -61,70 +61,77 @@ export * from './PrismaP2026Error';
 export * from './PrismaP2027Error';
 export * from './PrismaP2030Error';
 
-export const toPrismaError = <T>(originalError: T): PrismaError | T => {
-  if (originalError instanceof PrismaClientKnownRequestError) {
-    switch (originalError.code) {
-      case 'P2000':
-        return new PrismaP2000Error(originalError);
-      case 'P2001':
-        return new PrismaP2001Error(originalError);
-      case 'P2002':
-        return new PrismaP2002Error(originalError);
-      case 'P2003':
-        return new PrismaP2003Error(originalError);
-      case 'P2004':
-        return new PrismaP2004Error(originalError);
-      case 'P2005':
-        return new PrismaP2005Error(originalError);
-      case 'P2006':
-        return new PrismaP2006Error(originalError);
-      case 'P2007':
-        return new PrismaP2007Error(originalError);
-      case 'P2008':
-        return new PrismaP2008Error(originalError);
-      case 'P2009':
-        return new PrismaP2009Error(originalError);
-      case 'P2010':
-        return new PrismaP2010Error(originalError);
-      case 'P2011':
-        return new PrismaP2011Error(originalError);
-      case 'P2012':
-        return new PrismaP2012Error(originalError);
-      case 'P2013':
-        return new PrismaP2013Error(originalError);
-      case 'P2014':
-        return new PrismaP2014Error(originalError);
-      case 'P2015':
-        return new PrismaP2015Error(originalError);
-      case 'P2016':
-        return new PrismaP2016Error(originalError);
-      case 'P2017':
-        return new PrismaP2017Error(originalError);
-      case 'P2018':
-        return new PrismaP2018Error(originalError);
-      case 'P2019':
-        return new PrismaP2019Error(originalError);
-      case 'P2020':
-        return new PrismaP2020Error(originalError);
-      case 'P2021':
-        return new PrismaP2021Error(originalError);
-      case 'P2022':
-        return new PrismaP2022Error(originalError);
-      case 'P2023':
-        return new PrismaP2023Error(originalError);
-      case 'P2024':
-        return new PrismaP2024Error(originalError);
-      case 'P2025':
-        return new PrismaP2025Error(originalError);
-      case 'P2026':
-        return new PrismaP2026Error(originalError);
-      case 'P2027':
-        return new PrismaP2027Error(originalError);
-      case 'P2030':
-        return new PrismaP2030Error(originalError);
-      default:
-        return new PrismaError(originalError);
-    }
+export const canPrismaError = (
+  error: any
+): error is PrismaClientKnownRequestError =>
+  error instanceof PrismaClientKnownRequestError;
+
+export const toPrismaError = (
+  originalError: PrismaClientKnownRequestError
+): PrismaError => {
+  switch (originalError.code) {
+    case 'P2000':
+      return new PrismaP2000Error(originalError);
+    case 'P2001':
+      return new PrismaP2001Error(originalError);
+    case 'P2002':
+      return new PrismaP2002Error(originalError);
+    case 'P2003':
+      return new PrismaP2003Error(originalError);
+    case 'P2004':
+      return new PrismaP2004Error(originalError);
+    case 'P2005':
+      return new PrismaP2005Error(originalError);
+    case 'P2006':
+      return new PrismaP2006Error(originalError);
+    case 'P2007':
+      return new PrismaP2007Error(originalError);
+    case 'P2008':
+      return new PrismaP2008Error(originalError);
+    case 'P2009':
+      return new PrismaP2009Error(originalError);
+    case 'P2010':
+      return new PrismaP2010Error(originalError);
+    case 'P2011':
+      return new PrismaP2011Error(originalError);
+    case 'P2012':
+      return new PrismaP2012Error(originalError);
+    case 'P2013':
+      return new PrismaP2013Error(originalError);
+    case 'P2014':
+      return new PrismaP2014Error(originalError);
+    case 'P2015':
+      return new PrismaP2015Error(originalError);
+    case 'P2016':
+      return new PrismaP2016Error(originalError);
+    case 'P2017':
+      return new PrismaP2017Error(originalError);
+    case 'P2018':
+      return new PrismaP2018Error(originalError);
+    case 'P2019':
+      return new PrismaP2019Error(originalError);
+    case 'P2020':
+      return new PrismaP2020Error(originalError);
+    case 'P2021':
+      return new PrismaP2021Error(originalError);
+    case 'P2022':
+      return new PrismaP2022Error(originalError);
+    case 'P2023':
+      return new PrismaP2023Error(originalError);
+    case 'P2024':
+      return new PrismaP2024Error(originalError);
+    case 'P2025':
+      return new PrismaP2025Error(originalError);
+    case 'P2026':
+      return new PrismaP2026Error(originalError);
+    case 'P2027':
+      return new PrismaP2027Error(originalError);
+    case 'P2030':
+      return new PrismaP2030Error(originalError);
+    default:
+      return new PrismaError(originalError);
   }
-  return originalError;
 };
+
+export const tryToPrismaError = <T>(originalError: T): PrismaError | T =>
+  canPrismaError(originalError) ? toPrismaError(originalError) : originalError;
