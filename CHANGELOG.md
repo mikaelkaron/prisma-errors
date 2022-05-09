@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/mikaelkaron/prisma-errors/compare/v1.0.0...v2.0.0) (2022-05-09)
+
+
+### Features
+
+* introduce `canPrismaError` typeguard ([bbf3678](https://github.com/mikaelkaron/prisma-errors/commit/bbf367873406a6f3b910a1948b313e9a354dc995))
+
+
+### BREAKING CHANGES
+
+* Instead of having `toPrismaError` be generic and testing for `instanceof` we're introducing the `canPrismaError` typeguard. If you want the old functionality use `tryToPrismaError` that internally uses `canPrismaError`
+
 # 1.0.0 (2022-02-10)
 
 
