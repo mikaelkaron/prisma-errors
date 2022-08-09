@@ -1,3 +1,16 @@
+# [2.1.0](https://github.com/mikaelkaron/prisma-errors/compare/v2.0.0...v2.1.0) (2022-08-09)
+
+
+### Bug Fixes
+
+* move `declarations` to `tsconfig.json` ([f45c6a9](https://github.com/mikaelkaron/prisma-errors/commit/f45c6a9b63acf023b0706031303b2f3dd3396a07))
+
+
+### Features
+
+* support `@prisma/client@4` ([8be6d82](https://github.com/mikaelkaron/prisma-errors/commit/8be6d82e630490a2d379da19cb6c6a5579472e9e))
+* switch to `standard` for linting ([5eb32d2](https://github.com/mikaelkaron/prisma-errors/commit/5eb32d202cadb6f78e4db86136177b8848d31766))
+
 # [2.0.0](https://github.com/mikaelkaron/prisma-errors/compare/v1.0.0...v2.0.0) (2022-05-09)
 
 
