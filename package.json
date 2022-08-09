@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --declaration -p tsconfig.json",
+    "build": "tsc",
     "clean": "shx rm -rf dist",
     "lint": "eslint src/**/*.ts",
     "semantic-release": "semantic-release"
