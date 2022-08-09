@@ -31,9 +31,9 @@
     "@semantic-release/github": "^8.0.4",
     "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "@tsconfig/node16": "^1.0.2",
-    "@wtf/eslint-config": "^1.0.0",
-    "semantic-release": "^19.0.2",
+    "eslint": "^8.21.0",
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "semantic-release": "^19.0.3",
     "shx": "^0.3.4",
     "typescript": "^4.6.4"
   },
