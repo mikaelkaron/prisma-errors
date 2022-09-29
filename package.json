@@ -28,15 +28,15 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^8.0.5",
+    "@semantic-release/github": "^8.0.6",
     "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "@tsconfig/node16": "^1.0.3",
-    "eslint": "^8.21.0",
-    "eslint-config-standard-with-typescript": "^22.0.0",
-    "semantic-release": "^19.0.3",
+    "eslint": "^8.24.0",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "semantic-release": "^19.0.5",
     "shx": "^0.3.4",
-    "typescript": "^4.7.4"
+    "typescript": "^4.8.4"
   },
   "dependencies": {
     "@prisma/client": "^3 || ^4"
